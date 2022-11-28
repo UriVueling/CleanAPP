@@ -18,8 +18,7 @@ struct StorageManager {
             let data = try JSONEncoder().encode(plantetObj)
             
             let cachesDirectory = getCachesDirectory()
-            print(cachesDirectory)
-            //TODO: append.json
+            //print(cachesDirectory)
             let storageURL = cachesDirectory.appendingPathComponent(name, isDirectory: false)
             
             do {
@@ -33,17 +32,35 @@ struct StorageManager {
         }
     }
     
+    func fileExist(name: String) -> Bool{
+        var exist: Bool
+        let path = NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true)[0] as String
+        let url = NSURL(fileURLWithPath: path)
+        
+        if let pathComponent = url.appendingPathComponent(name) {
+            let filePath = pathComponent.path
+            let fileManager = FileManager.default
+            if fileManager.fileExists(atPath: filePath) {
+                exist = true
+            } else {
+                exist = false
+            }
+        } else {
+            exist = false
+        }
+        return exist
+    }
+    
     func getObjects(name: String) -> [PlanetsAPIProtocol]? {
         let cachesDirectory = getCachesDirectory()
-        //TODO: append.json
-        let storageURL = cachesDirectory.appendingPathComponent(name,
-                                                                   isDirectory: false)
+        
+        let storageURL = cachesDirectory.appendingPathComponent(name, isDirectory: false)
+        
         
         guard let data = try? Data(contentsOf: storageURL),
               let object = try? JSONDecoder().decode([PlanetsAPI].self, from: data) else {
             return nil
         }
-        
         return object
     }
     

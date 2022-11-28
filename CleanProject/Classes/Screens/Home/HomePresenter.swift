@@ -14,6 +14,7 @@ protocol HomePresenterProtocol{
     func countArray() ->Int
     func getArray() -> [PlanetsAPIProtocol]
     func checkIfMoreURL()-> Bool
+    var loadFromCache: Bool { get set }
     
 }
 
@@ -23,8 +24,8 @@ class HomePresenter {
     var view: HomeViewProtocol?
     
     var urlToPass = "https://swapi.dev/api/planets/"
-
     var arrayLocal = [PlanetsAPIProtocol]()
+    var loadFromCache = false
     
     init(interactor: HomeInteractorProtocol) {
         self.interactor = interactor
@@ -40,15 +41,28 @@ extension HomePresenter: HomePresenterProtocol {
             switch result {
             case .success(let resultAPI):
                 self.arrayLocal.append(contentsOf: resultAPI.results)
-                print(resultAPI)
                 guard let nexturl = resultAPI.next else { return }
                 self.urlToPass = nexturl
                 self.view?.loadData()
-
+                self.saveCache()
                 break
                 
             case .failure(_):
-                self.view?.showAlert(tittle: "Error en la API", messageAlert: "No estamos recibiendo la info")
+                //TODO: Comprobar si existeix caché
+                //TODO: Si no existeix cambiar el missatge de la alerta
+                
+                let cacheExist = StorageManager().fileExist(name: "planets.json")
+                if cacheExist{
+                    self.loadFromCache = true
+                    self.arrayLocal = StorageManager().getObjects(name: "planets.json") as! [PlanetsAPI]
+                    self.view?.loadData()
+                    self.view?.showAlert(tittle: "Error en la API", messageAlert: "No estamos recibiendo la info, cargando de cache")
+                    print("_____________________________LOADING CACHE______________________________")
+            
+                }else{
+                    self.view?.showAlert(tittle: "Sorry", messageAlert: "No tenemos cache")
+                }
+
                 break
                 
             }
@@ -70,5 +84,9 @@ extension HomePresenter: HomePresenterProtocol {
         } else{
             return false
         }
+    }
+    func saveCache(){
+    StorageManager().saveObjects(objectArray: self.arrayLocal, name: "planets.json")
+
     }
 }

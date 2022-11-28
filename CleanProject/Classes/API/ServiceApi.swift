@@ -23,31 +23,10 @@ public class ServiceAPI: ServiceAPIProtocol{
                     
                 case .failure(let error):
                     completion(.failure(error))
-                    print(error)
+                    //print(error)
             }
         }
     }
 }
-//        guard let url = urlFinal else{ return }
-//
-//        let urlSession = URLSession.shared
-//        urlSession.dataTask(with: url){ (data, response, error) in
-//
-//            if let error{
-//                completion(.failure(error))
-//            }
-//            if let data{
-//                do{
-//                    //reb un objecte pero l'ha d'asignar a un array
-//                    let planetResultAPI =  try JSONDecoder().decode(PlanetsInfoSW.self, from: data)
-//                    completion(.success(planetResultAPI))
-//
-//
-//                }catch let decodeError{
-//                    print(decodeError)
-//                    completion(.failure(decodeError))
-//                }
-//            }
-//        }.resume()
-//    }
+
 

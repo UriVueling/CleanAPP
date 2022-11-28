@@ -219,7 +219,6 @@
 		64B971EF2934DED900605C49 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				64B9722E293516A900605C49 /* Paginacion */,
 				64B971F62934DF5300605C49 /* Home */,
 			);
 			path = Screens;
@@ -301,13 +300,6 @@
 			children = (
 			);
 			path = Translations;
-			sourceTree = "<group>";
-		};
-		64B9722E293516A900605C49 /* Paginacion */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Paginacion;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
