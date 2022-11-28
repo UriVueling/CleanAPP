@@ -13,6 +13,7 @@ protocol HomePresenterProtocol{
     func askForArrayInteractorWithURL()
     func countArray() ->Int
     func getArray() -> [PlanetsAPIProtocol]
+    func checkIfMoreURL()-> Bool
     
 }
 
@@ -40,7 +41,8 @@ extension HomePresenter: HomePresenterProtocol {
             case .success(let resultAPI):
                 self.arrayLocal.append(contentsOf: resultAPI.results)
                 print(resultAPI)
-                //self.urlToPass = resultAPI.results
+                guard let nexturl = resultAPI.next else { return }
+                self.urlToPass = nexturl
                 self.view?.loadData()
 
                 break
@@ -60,5 +62,13 @@ extension HomePresenter: HomePresenterProtocol {
     func getArray() -> [PlanetsAPIProtocol] {
         return arrayLocal
         
+    }
+    
+    func checkIfMoreURL()-> Bool {
+        if (urlToPass != nil){
+            return true
+        } else{
+            return false
+        }
     }
 }

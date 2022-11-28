@@ -18,6 +18,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     var presenter: HomePresenterProtocol?
     var coordinator: HomeCoordinatorProtocol?
     
+    
     @IBOutlet weak var loading: UIActivityIndicatorView!
     @IBOutlet weak var table: UITableView!
     
@@ -35,8 +36,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         table.register(UINib(nibName: "CustomCell", bundle: nil), forCellReuseIdentifier: "CustomCell")
         table.dataSource = self
         table.delegate = self
-        
-        loading.isHidden = true
     }
 }
 
@@ -47,7 +46,7 @@ extension HomeViewController: HomeViewProtocol {
         return count
         
     }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //TODO: CHANGE IDENTIFIER "RickViewCell" AND as? RickViewCell (CUSTOM CELL)
         if let cell = table.dequeueReusableCell(withIdentifier: "CustomCell", for: indexPath) as? CustomCell{
@@ -66,6 +65,17 @@ extension HomeViewController: HomeViewProtocol {
             return }
         self.coordinator?.goToDetails(data: data, sender: self)
         
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
+        guard let countingRowsOfTable = self.presenter?.countArray() else { return }
+        
+        guard let stopNextCall = presenter?.checkIfMoreURL() else { return }
+        //When there is 5 rows left for show charge makes a call for more info
+        if indexPath.row == (countingRowsOfTable - 5) && stopNextCall{
+            presenter?.askForArrayInteractorWithURL()
+        }
     }
     //MARK: FUNCTIONS
     func showAlert(tittle: String, messageAlert: String) {
