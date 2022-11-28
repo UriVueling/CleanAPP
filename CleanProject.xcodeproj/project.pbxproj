@@ -29,6 +29,10 @@
 		64B972152934E73500605C49 /* AlertClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B972142934E73500605C49 /* AlertClass.swift */; };
 		64B972172934F92E00605C49 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B972162934F92E00605C49 /* ApiManager.swift */; };
 		64B972192934F95200605C49 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B972182934F95200605C49 /* CustomError.swift */; };
+		64B9721E29350D2C00605C49 /* DetailsHomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B9721B29350D2C00605C49 /* DetailsHomePresenter.swift */; };
+		64B9721F29350D2C00605C49 /* DetailsHomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B9721C29350D2C00605C49 /* DetailsHomeInteractor.swift */; };
+		64B9722029350D2C00605C49 /* DetailsHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B9721D29350D2C00605C49 /* DetailsHomeView.swift */; };
+		64B9722229350D4000605C49 /* DetailsHomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64B9722129350D4000605C49 /* DetailsHomeView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +79,10 @@
 		64B972142934E73500605C49 /* AlertClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertClass.swift; sourceTree = "<group>"; };
 		64B972162934F92E00605C49 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		64B972182934F95200605C49 /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
+		64B9721B29350D2C00605C49 /* DetailsHomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsHomePresenter.swift; sourceTree = "<group>"; };
+		64B9721C29350D2C00605C49 /* DetailsHomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsHomeInteractor.swift; sourceTree = "<group>"; };
+		64B9721D29350D2C00605C49 /* DetailsHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsHomeView.swift; sourceTree = "<group>"; };
+		64B9722129350D4000605C49 /* DetailsHomeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsHomeView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -250,6 +258,7 @@
 		64B971F62934DF5300605C49 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				64B9721A29350D0D00605C49 /* Details */,
 				64B972092934E55D00605C49 /* CustomCell */,
 				64B971F82934DF7900605C49 /* HomePresenter.swift */,
 				64B971F92934DF7900605C49 /* HomeViewController.swift */,
@@ -268,6 +277,17 @@
 				64B972102934E64700605C49 /* CustomCell.xib */,
 			);
 			path = CustomCell;
+			sourceTree = "<group>";
+		};
+		64B9721A29350D0D00605C49 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				64B9721B29350D2C00605C49 /* DetailsHomePresenter.swift */,
+				64B9721C29350D2C00605C49 /* DetailsHomeInteractor.swift */,
+				64B9721D29350D2C00605C49 /* DetailsHomeView.swift */,
+				64B9722129350D4000605C49 /* DetailsHomeView.xib */,
+			);
+			path = Details;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -375,6 +395,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				64B971C62934DE4E00605C49 /* LaunchScreen.storyboard in Resources */,
+				64B9722229350D4000605C49 /* DetailsHomeView.xib in Resources */,
 				64B971C32934DE4E00605C49 /* Assets.xcassets in Resources */,
 				64B972122934E64700605C49 /* CustomCell.xib in Resources */,
 				64B972082934E4FC00605C49 /* HomeViewController.xib in Resources */,
@@ -402,8 +423,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64B9722029350D2C00605C49 /* DetailsHomeView.swift in Sources */,
 				64B972002934DF7900605C49 /* HomeCoodinator.swift in Sources */,
 				64B972042934E27B00605C49 /* PlanetsInfoSW.swift in Sources */,
+				64B9721F29350D2C00605C49 /* DetailsHomeInteractor.swift in Sources */,
 				64B971BA2934DE4D00605C49 /* AppDelegate.swift in Sources */,
 				64B971BC2934DE4D00605C49 /* SceneDelegate.swift in Sources */,
 				64B972012934DF7900605C49 /* HomeInteractor.swift in Sources */,
@@ -414,6 +437,7 @@
 				64B972022934DF7900605C49 /* HomeService.swift in Sources */,
 				64B971F52934DF3000605C49 /* AppCoodinator.swift in Sources */,
 				64B972172934F92E00605C49 /* ApiManager.swift in Sources */,
+				64B9721E29350D2C00605C49 /* DetailsHomePresenter.swift in Sources */,
 				64B972112934E64700605C49 /* CustomCell.swift in Sources */,
 				64B971FF2934DF7900605C49 /* HomeViewController.swift in Sources */,
 				64B972152934E73500605C49 /* AlertClass.swift in Sources */,

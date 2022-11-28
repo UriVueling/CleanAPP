@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="EVF-qZ-tG6">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Zuo-hm-ZQr">
+                    <rect key="frame" x="0.0" y="59.000000000000007" width="393" height="25.333333333333336"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MEu-T2-VA3">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="25.333333333333332"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="PlanetName:   " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xWG-aq-smQ">
+                                    <rect key="frame" x="0.0" y="0.0" width="131.66666666666666" height="25.333333333333332"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" secondItem="xWG-aq-smQ" secondAttribute="height" multiplier="2:3" id="Aek-W5-lrn"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OF3-Yh-Cy1">
+                                    <rect key="frame" x="131.66666666666666" y="0.0" width="261.33333333333337" height="25.333333333333332"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="MEu-T2-VA3" firstAttribute="top" secondItem="Zuo-hm-ZQr" secondAttribute="top" id="N4o-SF-nne"/>
+                        <constraint firstAttribute="bottom" secondItem="MEu-T2-VA3" secondAttribute="bottom" id="aLT-h4-SA2"/>
+                        <constraint firstItem="MEu-T2-VA3" firstAttribute="leading" secondItem="Zuo-hm-ZQr" secondAttribute="leading" id="q66-Fs-eQb"/>
+                        <constraint firstAttribute="trailing" secondItem="MEu-T2-VA3" secondAttribute="trailing" id="t0a-bi-mQd"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="OBC-Ln-cqB"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Zuo-hm-ZQr" firstAttribute="top" secondItem="OBC-Ln-cqB" secondAttribute="top" id="MYW-Pm-PgI"/>
+                <constraint firstItem="OBC-Ln-cqB" firstAttribute="bottom" secondItem="Zuo-hm-ZQr" secondAttribute="bottom" id="iRC-65-OhT"/>
+                <constraint firstItem="OBC-Ln-cqB" firstAttribute="trailing" secondItem="Zuo-hm-ZQr" secondAttribute="trailing" id="n5u-fQ-C58"/>
+                <constraint firstItem="Zuo-hm-ZQr" firstAttribute="leading" secondItem="OBC-Ln-cqB" secondAttribute="leading" id="yal-pM-olE"/>
+            </constraints>
+            <point key="canvasLocation" x="-109" y="76"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
