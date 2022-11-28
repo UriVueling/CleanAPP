@@ -15,6 +15,7 @@ protocol HomePresenterProtocol{
     func getArray() -> [PlanetsAPIProtocol]
     func checkIfMoreURL()-> Bool
     var loadFromCache: Bool { get set }
+    //var loadSpinner: Bool { get set }
     
 }
 
@@ -26,6 +27,7 @@ class HomePresenter {
     var urlToPass = "https://swapi.dev/api/planets/"
     var arrayLocal = [PlanetsAPIProtocol]()
     var loadFromCache = false
+    //var loadSpinner = false
     
     init(interactor: HomeInteractorProtocol) {
         self.interactor = interactor
@@ -48,17 +50,13 @@ extension HomePresenter: HomePresenterProtocol {
                 break
                 
             case .failure(_):
-                //TODO: Comprobar si existeix caché
-                //TODO: Si no existeix cambiar el missatge de la alerta
-                
+
                 let cacheExist = StorageManager().fileExist(name: "planets.json")
                 if cacheExist{
                     self.loadFromCache = true
                     self.arrayLocal = StorageManager().getObjects(name: "planets.json") as! [PlanetsAPI]
                     self.view?.loadData()
                     self.view?.showAlert(tittle: "Error en la API", messageAlert: "No estamos recibiendo la info, cargando de cache")
-                    print("_____________________________LOADING CACHE______________________________")
-            
                 }else{
                     self.view?.showAlert(tittle: "Sorry", messageAlert: "No tenemos cache")
                 }

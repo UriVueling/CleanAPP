@@ -18,7 +18,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     var presenter: HomePresenterProtocol?
     var coordinator: HomeCoordinatorProtocol?
     
-    @IBOutlet weak var loading: UIActivityIndicatorView!
+//    @IBOutlet weak var loading: UIActivityIndicatorView!
     @IBOutlet weak var table: UITableView!
     
     public convenience init(presenter: HomePresenterProtocol) {
@@ -52,7 +52,6 @@ extension HomeViewController: HomeViewProtocol {
             
             guard let arrayFromPresenter = presenter?.getArray() else { return cell }
             cell.label.text = arrayFromPresenter[indexPath.row].name
-            
             return cell
         }
         return UITableViewCell()
@@ -74,8 +73,8 @@ extension HomeViewController: HomeViewProtocol {
         let loadFromCache = presenter?.loadFromCache else { return }
         
         if !loadFromCache {
+            
             guard let stopNextCall = presenter?.checkIfMoreURL() else { return }
-
             if indexPath.row == (countingRowsOfTable - 5) && stopNextCall{
                 presenter?.askForArrayInteractorWithURL()
             }
