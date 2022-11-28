@@ -8,8 +8,7 @@
 import Foundation
 
 protocol DetailsHomePresenterProtocol{
-    func viewDidLoadWasCalled()
-    func getDataName() -> String
+
     
 }
 
@@ -26,15 +25,5 @@ internal final class DetailsHomePresenter {
 }
 
 extension DetailsHomePresenter: DetailsHomePresenterProtocol {
-    func viewDidLoadWasCalled(){
-        let object = interactor.getData()
-        self.view?.setInfoOnScreen(objectPresenter: object)
-        self.view?.setImageOnScreen(objectPresenter: object)
-        
-    }
-    func getDataName()-> String{
-        let location = interactor.getData()
-        return location.name
-        
-    }
+
 }

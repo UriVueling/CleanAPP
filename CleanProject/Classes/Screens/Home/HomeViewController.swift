@@ -18,6 +18,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     var presenter: HomePresenterProtocol?
     var coordinator: HomeCoordinatorProtocol?
     
+    @IBOutlet weak var loading: UIActivityIndicatorView!
     @IBOutlet weak var table: UITableView!
     
     public convenience init(presenter: HomePresenterProtocol) {
@@ -34,6 +35,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         table.register(UINib(nibName: "CustomCell", bundle: nil), forCellReuseIdentifier: "CustomCell")
         table.dataSource = self
         table.delegate = self
+        
+        loading.isHidden = true
     }
 }
 

@@ -33,6 +33,7 @@
 		64B9721F29350D2C00605C49 /* DetailsHomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B9721C29350D2C00605C49 /* DetailsHomeInteractor.swift */; };
 		64B9722029350D2C00605C49 /* DetailsHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B9721D29350D2C00605C49 /* DetailsHomeView.swift */; };
 		64B9722229350D4000605C49 /* DetailsHomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64B9722129350D4000605C49 /* DetailsHomeView.xib */; };
+		64B9722529350E7E00605C49 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B9722429350E7E00605C49 /* StorageManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		64B9721C29350D2C00605C49 /* DetailsHomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsHomeInteractor.swift; sourceTree = "<group>"; };
 		64B9721D29350D2C00605C49 /* DetailsHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsHomeView.swift; sourceTree = "<group>"; };
 		64B9722129350D4000605C49 /* DetailsHomeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsHomeView.xib; sourceTree = "<group>"; };
+		64B9722429350E7E00605C49 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,9 +187,9 @@
 		64B971EC2934DEC400605C49 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				64B971F22934DEFF00605C49 /* Managers */,
 				64B971ED2934DECC00605C49 /* API */,
 				64B971F32934DF0500605C49 /* Bases */,
-				64B971F22934DEFF00605C49 /* Managers */,
 				64B971F02934DEE300605C49 /* App */,
 				64B971EF2934DED900605C49 /* Screens */,
 			);
@@ -197,7 +199,6 @@
 		64B971ED2934DECC00605C49 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				64B972162934F92E00605C49 /* ApiManager.swift */,
 				64B971F72934DF7900605C49 /* ServiceApi.swift */,
 				64B971EE2934DED200605C49 /* Models */,
 			);
@@ -242,6 +243,8 @@
 		64B971F22934DEFF00605C49 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				64B972162934F92E00605C49 /* ApiManager.swift */,
+				64B9722429350E7E00605C49 /* StorageManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -261,10 +264,10 @@
 				64B9721A29350D0D00605C49 /* Details */,
 				64B972092934E55D00605C49 /* CustomCell */,
 				64B971F82934DF7900605C49 /* HomePresenter.swift */,
-				64B971F92934DF7900605C49 /* HomeViewController.swift */,
 				64B971FA2934DF7900605C49 /* HomeCoodinator.swift */,
 				64B971FB2934DF7900605C49 /* HomeInteractor.swift */,
 				64B971FC2934DF7900605C49 /* HomeService.swift */,
+				64B971F92934DF7900605C49 /* HomeViewController.swift */,
 				64B972072934E4FC00605C49 /* HomeViewController.xib */,
 			);
 			path = Home;
@@ -432,6 +435,7 @@
 				64B972012934DF7900605C49 /* HomeInteractor.swift in Sources */,
 				64B972192934F95200605C49 /* CustomError.swift in Sources */,
 				64B972062934E28E00605C49 /* PlanetsAPI.swift in Sources */,
+				64B9722529350E7E00605C49 /* StorageManager.swift in Sources */,
 				64B971FD2934DF7900605C49 /* ServiceApi.swift in Sources */,
 				64B971FE2934DF7900605C49 /* HomePresenter.swift in Sources */,
 				64B972022934DF7900605C49 /* HomeService.swift in Sources */,

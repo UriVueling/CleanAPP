@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="CleanProject" customModuleProvider="target">
             <connections>
+                <outlet property="loading" destination="JK7-TE-243" id="k73-ks-AGV"/>
                 <outlet property="table" destination="upB-X5-N1A" id="aGX-dB-bwk"/>
                 <outlet property="view" destination="ipU-pM-W0s" id="2Ap-FV-kSq"/>
             </connections>
@@ -23,13 +24,18 @@
                     <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="JK7-TE-243">
+                    <rect key="frame" x="178" y="407.66666666666669" width="37" height="37"/>
+                </activityIndicatorView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="Ppq-tu-Zia"/>
             <color key="backgroundColor" systemColor="systemGreenColor"/>
             <constraints>
                 <constraint firstItem="upB-X5-N1A" firstAttribute="top" secondItem="Ppq-tu-Zia" secondAttribute="top" id="10U-eM-JI7"/>
+                <constraint firstItem="JK7-TE-243" firstAttribute="centerY" secondItem="ipU-pM-W0s" secondAttribute="centerY" id="GK3-IY-nxh"/>
                 <constraint firstItem="Ppq-tu-Zia" firstAttribute="bottom" secondItem="upB-X5-N1A" secondAttribute="bottom" id="WFO-fc-FoY"/>
                 <constraint firstItem="Ppq-tu-Zia" firstAttribute="trailing" secondItem="upB-X5-N1A" secondAttribute="trailing" id="XJ8-BT-pDD"/>
+                <constraint firstItem="JK7-TE-243" firstAttribute="centerX" secondItem="ipU-pM-W0s" secondAttribute="centerX" id="j9G-yJ-t4X"/>
                 <constraint firstItem="upB-X5-N1A" firstAttribute="leading" secondItem="Ppq-tu-Zia" secondAttribute="leading" id="oEs-Mb-fWu"/>
             </constraints>
             <point key="canvasLocation" x="137" y="31"/>
