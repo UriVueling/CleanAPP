@@ -85,6 +85,7 @@
 		64B9721D29350D2C00605C49 /* DetailsHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsHomeView.swift; sourceTree = "<group>"; };
 		64B9722129350D4000605C49 /* DetailsHomeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsHomeView.xib; sourceTree = "<group>"; };
 		64B9722429350E7E00605C49 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		64B972262935110C00605C49 /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = ca.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +163,7 @@
 		64B971E92934DE9600605C49 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				64B972272935129E00605C49 /* Translations */,
 				64B971EB2934DEB600605C49 /* Interfaces */,
 				64B971EA2934DEAA00605C49 /* Images */,
 			);
@@ -217,6 +219,7 @@
 		64B971EF2934DED900605C49 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				64B9722E293516A900605C49 /* Paginacion */,
 				64B971F62934DF5300605C49 /* Home */,
 			);
 			path = Screens;
@@ -291,6 +294,20 @@
 				64B9722129350D4000605C49 /* DetailsHomeView.xib */,
 			);
 			path = Details;
+			sourceTree = "<group>";
+		};
+		64B972272935129E00605C49 /* Translations */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Translations;
+			sourceTree = "<group>";
+		};
+		64B9722E293516A900605C49 /* Paginacion */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Paginacion;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -379,6 +396,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ca,
 			);
 			mainGroup = 64B971AD2934DE4D00605C49;
 			productRefGroup = 64B971B72934DE4D00605C49 /* Products */;
@@ -485,6 +503,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				64B971C52934DE4E00605C49 /* Base */,
+				64B972262935110C00605C49 /* ca */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -496,6 +515,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -556,6 +576,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";

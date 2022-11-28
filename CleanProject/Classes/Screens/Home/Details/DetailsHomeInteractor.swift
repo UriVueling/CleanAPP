@@ -8,16 +8,16 @@
 import Foundation
 
 protocol DetailsHomeInteractorProtocol {
-    //TODO: CHANGE LocationClass
+
     
 }
 
 internal final class DetailsHomeInteractor {
-    //TODO: CHANGE LocationClass
+
 
 }
 
 extension DetailsHomeInteractor: DetailsHomeInteractorProtocol {
-    //TODO: CHANGE LocationClass
+
 
 }

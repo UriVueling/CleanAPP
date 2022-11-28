@@ -31,8 +31,8 @@ struct PlanetsInfoSW: PlanetsInfoSWProtocol, Codable{
         let values = try decoder.container(keyedBy: CodingKeys.self)
 
         count = try values.decode(Int.self, forKey: .count)
-        next = try values.decode(String.self, forKey: .next)
-        previous = try values.decode(String.self, forKey: .previous)
+        next = try? values.decode(String.self, forKey: .next)
+        previous = try? values.decode(String.self, forKey: .previous)
         castResults = try values.decode([PlanetsAPI].self, forKey: .results)
     }
     func encode(to encoder: Encoder) throws {

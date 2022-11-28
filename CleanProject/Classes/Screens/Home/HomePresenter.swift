@@ -22,7 +22,7 @@ class HomePresenter {
     var view: HomeViewProtocol?
     
     var urlToPass = "https://swapi.dev/api/planets/"
-    //TODO: change PlanetsAPI
+
     var arrayLocal = [PlanetsAPIProtocol]()
     
     init(interactor: HomeInteractorProtocol) {
@@ -42,7 +42,7 @@ extension HomePresenter: HomePresenterProtocol {
                 print(resultAPI)
                 //self.urlToPass = resultAPI.results
                 self.view?.loadData()
-                //print("PRESENTER PRINT: \(resultAPI.results[1].name)")
+
                 break
                 
             case .failure(_):

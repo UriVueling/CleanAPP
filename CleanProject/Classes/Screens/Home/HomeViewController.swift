@@ -61,10 +61,10 @@ extension HomeViewController: HomeViewProtocol {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         table.deselectRow(at: indexPath, animated: true)
-            guard let data = self.presenter?.getArray()[indexPath.row] else{
-                return }
         
-        //self.coordinator?.goToDetails(data: data, sender: self)
+        guard let data = self.presenter?.getArray()[indexPath.row] else{
+            return }
+        self.coordinator?.goToDetails(data: data, sender: self)
         
     }
     //MARK: FUNCTIONS

@@ -14,7 +14,9 @@ protocol DetailsHomeViewProtocol {
 
 class DetailsHomeView: UIViewController {
     var presenter: DetailsHomePresenterProtocol?
+//    let strPlanetName = NSLocalizedString("planetName.key", comment: "")
 
+    @IBOutlet weak var planetNameLabel: UILabel!
     
     public convenience init(presenter: DetailsHomePresenterProtocol) {
         //TODO: Change nom de nibname
@@ -26,6 +28,7 @@ class DetailsHomeView: UIViewController {
         setupView()
     }
     func setupView(){
+//        planetNameLabel.text = strPlanetName
         self.tabBarController?.tabBar.isHidden = true
     }
 }
