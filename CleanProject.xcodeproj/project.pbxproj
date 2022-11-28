@@ -27,6 +27,8 @@
 		64B972112934E64700605C49 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B9720F2934E64700605C49 /* CustomCell.swift */; };
 		64B972122934E64700605C49 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64B972102934E64700605C49 /* CustomCell.xib */; };
 		64B972152934E73500605C49 /* AlertClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B972142934E73500605C49 /* AlertClass.swift */; };
+		64B972172934F92E00605C49 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B972162934F92E00605C49 /* ApiManager.swift */; };
+		64B972192934F95200605C49 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B972182934F95200605C49 /* CustomError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,8 @@
 		64B9720F2934E64700605C49 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		64B972102934E64700605C49 /* CustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
 		64B972142934E73500605C49 /* AlertClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertClass.swift; sourceTree = "<group>"; };
+		64B972162934F92E00605C49 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		64B972182934F95200605C49 /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,11 +177,11 @@
 		64B971EC2934DEC400605C49 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				64B971ED2934DECC00605C49 /* API */,
 				64B971F32934DF0500605C49 /* Bases */,
 				64B971F22934DEFF00605C49 /* Managers */,
 				64B971F02934DEE300605C49 /* App */,
 				64B971EF2934DED900605C49 /* Screens */,
-				64B971ED2934DECC00605C49 /* API */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -185,6 +189,7 @@
 		64B971ED2934DECC00605C49 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				64B972162934F92E00605C49 /* ApiManager.swift */,
 				64B971F72934DF7900605C49 /* ServiceApi.swift */,
 				64B971EE2934DED200605C49 /* Models */,
 			);
@@ -236,7 +241,8 @@
 		64B971F32934DF0500605C49 /* Bases */ = {
 			isa = PBXGroup;
 			children = (
-				64B972132934E71300605C49 /* Alerts */,
+				64B972142934E73500605C49 /* AlertClass.swift */,
+				64B972182934F95200605C49 /* CustomError.swift */,
 			);
 			path = Bases;
 			sourceTree = "<group>";
@@ -262,14 +268,6 @@
 				64B972102934E64700605C49 /* CustomCell.xib */,
 			);
 			path = CustomCell;
-			sourceTree = "<group>";
-		};
-		64B972132934E71300605C49 /* Alerts */ = {
-			isa = PBXGroup;
-			children = (
-				64B972142934E73500605C49 /* AlertClass.swift */,
-			);
-			path = Alerts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -409,11 +407,13 @@
 				64B971BA2934DE4D00605C49 /* AppDelegate.swift in Sources */,
 				64B971BC2934DE4D00605C49 /* SceneDelegate.swift in Sources */,
 				64B972012934DF7900605C49 /* HomeInteractor.swift in Sources */,
+				64B972192934F95200605C49 /* CustomError.swift in Sources */,
 				64B972062934E28E00605C49 /* PlanetsAPI.swift in Sources */,
 				64B971FD2934DF7900605C49 /* ServiceApi.swift in Sources */,
 				64B971FE2934DF7900605C49 /* HomePresenter.swift in Sources */,
 				64B972022934DF7900605C49 /* HomeService.swift in Sources */,
 				64B971F52934DF3000605C49 /* AppCoodinator.swift in Sources */,
+				64B972172934F92E00605C49 /* ApiManager.swift in Sources */,
 				64B972112934E64700605C49 /* CustomCell.swift in Sources */,
 				64B971FF2934DF7900605C49 /* HomeViewController.swift in Sources */,
 				64B972152934E73500605C49 /* AlertClass.swift in Sources */,

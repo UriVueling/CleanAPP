@@ -16,18 +16,31 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5sf-wb-aog">
+                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7RI-jq-Drh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconPlanet" translatesAutoresizingMaskIntoConstraints="NO" id="JN6-ST-eOM">
+                                <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="JN6-ST-eOM" secondAttribute="height" multiplier="1:1" id="TeO-Vp-SGI"/>
+                                    <constraint firstAttribute="width" constant="44" id="t8P-Yx-y7j"/>
+                                    <constraint firstAttribute="height" constant="44" id="tMM-8O-xrV"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5sf-wb-aog">
+                                <rect key="frame" x="44" y="0.0" width="276" height="44"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="5sf-wb-aog" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="KQi-I9-h2B"/>
-                    <constraint firstAttribute="trailing" secondItem="5sf-wb-aog" secondAttribute="trailing" id="Srt-dz-eCa"/>
-                    <constraint firstItem="5sf-wb-aog" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="fX9-yK-UhN"/>
-                    <constraint firstAttribute="bottom" secondItem="5sf-wb-aog" secondAttribute="bottom" id="xFW-9H-uj4"/>
+                    <constraint firstAttribute="trailing" secondItem="7RI-jq-Drh" secondAttribute="trailing" id="2ad-8H-M1p"/>
+                    <constraint firstItem="7RI-jq-Drh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="IYb-g9-txL"/>
+                    <constraint firstAttribute="bottom" secondItem="7RI-jq-Drh" secondAttribute="bottom" id="LDp-jj-3dw"/>
+                    <constraint firstItem="7RI-jq-Drh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="j3g-pe-egN"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -37,4 +50,7 @@
             <point key="canvasLocation" x="6" y="20"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="iconPlanet" width="225" height="225"/>
+    </resources>
 </document>

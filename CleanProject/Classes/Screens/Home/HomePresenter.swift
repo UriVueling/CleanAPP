@@ -7,12 +7,12 @@
 //
 protocol HomePresenterProtocol{
     var view: HomeViewProtocol? { get set }
-    var urlToPass: String? { get set }
+    var urlToPass: String { get set }
     //TODO: change PlanetsAPI
-    var arrayLocal: [PlanetsAPI] { get set }
+    var arrayLocal: [PlanetsAPIProtocol] { get set }
     func askForArrayInteractorWithURL()
     func countArray() ->Int
-    func getArray() -> [PlanetsAPI]
+    func getArray() -> [PlanetsAPIProtocol]
     
 }
 
@@ -21,9 +21,9 @@ class HomePresenter {
     var interactor: HomeInteractorProtocol
     var view: HomeViewProtocol?
     
-    var urlToPass: String?
+    var urlToPass = "https://swapi.dev/api/planets/"
     //TODO: change PlanetsAPI
-    var arrayLocal = [PlanetsAPI]()
+    var arrayLocal = [PlanetsAPIProtocol]()
     
     init(interactor: HomeInteractorProtocol) {
         self.interactor = interactor
@@ -39,6 +39,7 @@ extension HomePresenter: HomePresenterProtocol {
             switch result {
             case .success(let resultAPI):
                 self.arrayLocal.append(contentsOf: resultAPI.results)
+                print(resultAPI)
                 //self.urlToPass = resultAPI.results
                 self.view?.loadData()
                 //print("PRESENTER PRINT: \(resultAPI.results[1].name)")
@@ -56,7 +57,7 @@ extension HomePresenter: HomePresenterProtocol {
         
     }
     
-    func getArray() -> [PlanetsAPI] {
+    func getArray() -> [PlanetsAPIProtocol] {
         return arrayLocal
         
     }
