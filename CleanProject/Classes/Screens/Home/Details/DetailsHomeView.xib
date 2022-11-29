@@ -42,21 +42,15 @@
                             </subviews>
                         </stackView>
                     </subviews>
-                    <constraints>
-                        <constraint firstItem="MEu-T2-VA3" firstAttribute="top" secondItem="Zuo-hm-ZQr" secondAttribute="top" id="N4o-SF-nne"/>
-                        <constraint firstAttribute="bottom" secondItem="MEu-T2-VA3" secondAttribute="bottom" id="aLT-h4-SA2"/>
-                        <constraint firstItem="MEu-T2-VA3" firstAttribute="leading" secondItem="Zuo-hm-ZQr" secondAttribute="leading" id="q66-Fs-eQb"/>
-                        <constraint firstAttribute="trailing" secondItem="MEu-T2-VA3" secondAttribute="trailing" id="t0a-bi-mQd"/>
-                    </constraints>
                 </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="OBC-Ln-cqB"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="Zuo-hm-ZQr" firstAttribute="top" secondItem="OBC-Ln-cqB" secondAttribute="top" id="MYW-Pm-PgI"/>
-                <constraint firstItem="OBC-Ln-cqB" firstAttribute="bottom" secondItem="Zuo-hm-ZQr" secondAttribute="bottom" id="iRC-65-OhT"/>
-                <constraint firstItem="OBC-Ln-cqB" firstAttribute="trailing" secondItem="Zuo-hm-ZQr" secondAttribute="trailing" id="n5u-fQ-C58"/>
-                <constraint firstItem="Zuo-hm-ZQr" firstAttribute="leading" secondItem="OBC-Ln-cqB" secondAttribute="leading" id="yal-pM-olE"/>
+                <constraint firstItem="OBC-Ln-cqB" firstAttribute="bottom" secondItem="Zuo-hm-ZQr" secondAttribute="bottom" id="8WV-St-guC"/>
+                <constraint firstItem="Zuo-hm-ZQr" firstAttribute="leading" secondItem="OBC-Ln-cqB" secondAttribute="leading" id="UCU-dx-xmJ"/>
+                <constraint firstItem="OBC-Ln-cqB" firstAttribute="trailing" secondItem="Zuo-hm-ZQr" secondAttribute="trailing" id="emQ-oL-OHZ"/>
+                <constraint firstItem="Zuo-hm-ZQr" firstAttribute="top" secondItem="OBC-Ln-cqB" secondAttribute="top" id="tss-Dv-7sg"/>
             </constraints>
             <point key="canvasLocation" x="-109" y="76"/>
         </view>

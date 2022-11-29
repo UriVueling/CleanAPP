@@ -38,10 +38,12 @@ class HomePresenter {
 
 extension HomePresenter: HomePresenterProtocol {
     func askForArrayInteractorWithURL() {
+        view?.loadingView(.show)
         interactor.asktoServiceArray(url: urlToPass, completion: {
             result in
             switch result {
             case .success(let resultAPI):
+                
                 self.arrayLocal.append(contentsOf: resultAPI.results)
                 guard let nexturl = resultAPI.next else { return }
                 self.urlToPass = nexturl
@@ -77,6 +79,7 @@ extension HomePresenter: HomePresenterProtocol {
     }
     
     func checkIfMoreURL()-> Bool {
+        //print("URL:____________________________\(urlToPass)")
         if (urlToPass != nil){
             return true
         } else{

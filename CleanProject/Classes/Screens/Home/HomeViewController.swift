@@ -8,17 +8,23 @@
 import Foundation
 import UIKit
 
+enum LoadingState{
+    case show
+    case hide
+}
+
 protocol HomeViewProtocol {
     //func didTapOnButton(viewController: HomeViewController)
     func showAlert(tittle: String, messageAlert: String)
     func loadData()
+    func loadingView(_ state: LoadingState)
 }
 
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var presenter: HomePresenterProtocol?
     var coordinator: HomeCoordinatorProtocol?
-    
-//    @IBOutlet weak var loading: UIActivityIndicatorView!
+    var loadingIndicator = UIActivityIndicatorView(style: .large)
+
     @IBOutlet weak var table: UITableView!
     
     public convenience init(presenter: HomePresenterProtocol) {
@@ -39,6 +45,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
 }
 
 extension HomeViewController: HomeViewProtocol {
+
+    
     //MARK: TABLE CONFIG
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let count = presenter?.countArray() else { return 0 }
@@ -86,6 +94,7 @@ extension HomeViewController: HomeViewProtocol {
         let pushAlert = AlertClass()
         DispatchQueue.main.async {
             pushAlert.callAlert(with: tittle, messageAlert: messageAlert, onView: self)
+            self.loadingView(.hide)
         }
         
     }
@@ -93,7 +102,26 @@ extension HomeViewController: HomeViewProtocol {
     func loadData() {
         DispatchQueue.main.async {
             self.table.reloadData()
+            self.loadingView(.hide)
         }
         
+    }
+    
+    func loadingView(_ state: LoadingState) {
+        switch state{
+            case .show:
+                showLoading()
+            case .hide:
+                hideLoading()
+        }
+    }
+    private func showLoading(){
+        view.addSubview(loadingIndicator)
+        loadingIndicator.center = view.center
+        loadingIndicator.startAnimating()
+    }
+    private func hideLoading(){
+        loadingIndicator.stopAnimating()
+        loadingIndicator.removeFromSuperview()
     }
 }
