@@ -38,6 +38,16 @@
 		64B9724D2935C12500605C49 /* PlanetsInfoSWMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B9724C2935C12500605C49 /* PlanetsInfoSWMock.swift */; };
 		64B9724F2935C1D200605C49 /* PlantetsAPIMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B9724E2935C1D200605C49 /* PlantetsAPIMock.swift */; };
 		64BB2C822935FA290004C536 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 64BB2C842935FA290004C536 /* Localizable.strings */; };
+		64BB2C87293654380004C536 /* HomeInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BB2C86293654380004C536 /* HomeInteractorTest.swift */; };
+		64BB2C89293654C50004C536 /* HomeServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BB2C88293654C50004C536 /* HomeServiceMock.swift */; };
+		64BB2C8C2936582B0004C536 /* ServiceAPIMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BB2C8B2936582B0004C536 /* ServiceAPIMock.swift */; };
+		64BB2C8F29365EB70004C536 /* AlertClassMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BB2C8E29365EB70004C536 /* AlertClassMock.swift */; };
+		64BB2C92293661010004C536 /* StorageManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BB2C91293661010004C536 /* StorageManagerMock.swift */; };
+		64BB2C94293678920004C536 /* HomeViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BB2C93293678920004C536 /* HomeViewControllerTest.swift */; };
+		64BB2C96293679130004C536 /* HomePresenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BB2C95293679130004C536 /* HomePresenterMock.swift */; };
+		64BB2C9829367D230004C536 /* HomeCoordinatorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BB2C9729367D230004C536 /* HomeCoordinatorMock.swift */; };
+		64BB2C9D29368B550004C536 /* CellMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BB2C9C29368B550004C536 /* CellMock.swift */; };
+		64BB2CA029368DAE0004C536 /* HomeViewCoordinatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BB2C9F29368DAE0004C536 /* HomeViewCoordinatorTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +97,16 @@
 		64B9724E2935C1D200605C49 /* PlantetsAPIMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantetsAPIMock.swift; sourceTree = "<group>"; };
 		64BB2C832935FA290004C536 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		64BB2C852935FA2D0004C536 /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = ca.lproj/Localizable.strings; sourceTree = "<group>"; };
+		64BB2C86293654380004C536 /* HomeInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractorTest.swift; sourceTree = "<group>"; };
+		64BB2C88293654C50004C536 /* HomeServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeServiceMock.swift; sourceTree = "<group>"; };
+		64BB2C8B2936582B0004C536 /* ServiceAPIMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceAPIMock.swift; sourceTree = "<group>"; };
+		64BB2C8E29365EB70004C536 /* AlertClassMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertClassMock.swift; sourceTree = "<group>"; };
+		64BB2C91293661010004C536 /* StorageManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManagerMock.swift; sourceTree = "<group>"; };
+		64BB2C93293678920004C536 /* HomeViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTest.swift; sourceTree = "<group>"; };
+		64BB2C95293679130004C536 /* HomePresenterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterMock.swift; sourceTree = "<group>"; };
+		64BB2C9729367D230004C536 /* HomeCoordinatorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinatorMock.swift; sourceTree = "<group>"; };
+		64BB2C9C29368B550004C536 /* CellMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellMock.swift; sourceTree = "<group>"; };
+		64BB2C9F29368DAE0004C536 /* HomeViewCoordinatorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewCoordinatorTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +159,9 @@
 			isa = PBXGroup;
 			children = (
 				64B9723C29353FAF00605C49 /* TestConstants.swift */,
+				64BB2C90293660ED0004C536 /* Managers */,
+				64BB2C8D29365EAB0004C536 /* Bases */,
+				64BB2C8A293657FE0004C536 /* API */,
 				64B9724B2935C10B00605C49 /* Model */,
 				64B9723B29353F9A00605C49 /* Screens */,
 			);
@@ -291,8 +314,7 @@
 		64B9723B29353F9A00605C49 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				64B9724029353FED00605C49 /* Mocks */,
-				64B9723E29353FE900605C49 /* HomePresenterTest.swift */,
+				64BB2C9929368B1D0004C536 /* Home */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -302,6 +324,9 @@
 			children = (
 				64B972412935402E00605C49 /* HomeInteractorMock.swift */,
 				64B97243293540C300605C49 /* HomeViewControllerMock.swift */,
+				64BB2C88293654C50004C536 /* HomeServiceMock.swift */,
+				64BB2C95293679130004C536 /* HomePresenterMock.swift */,
+				64BB2C9729367D230004C536 /* HomeCoordinatorMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -313,6 +338,59 @@
 				64B9724E2935C1D200605C49 /* PlantetsAPIMock.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		64BB2C8A293657FE0004C536 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				64BB2C8B2936582B0004C536 /* ServiceAPIMock.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		64BB2C8D29365EAB0004C536 /* Bases */ = {
+			isa = PBXGroup;
+			children = (
+				64BB2C8E29365EB70004C536 /* AlertClassMock.swift */,
+			);
+			path = Bases;
+			sourceTree = "<group>";
+		};
+		64BB2C90293660ED0004C536 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				64BB2C91293661010004C536 /* StorageManagerMock.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		64BB2C9929368B1D0004C536 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				64BB2C9A29368B290004C536 /* Details */,
+				64B9724029353FED00605C49 /* Mocks */,
+				64B9723E29353FE900605C49 /* HomePresenterTest.swift */,
+				64BB2C86293654380004C536 /* HomeInteractorTest.swift */,
+				64BB2C93293678920004C536 /* HomeViewControllerTest.swift */,
+				64BB2C9F29368DAE0004C536 /* HomeViewCoordinatorTest.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		64BB2C9A29368B290004C536 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				64BB2C9B29368B3E0004C536 /* Mock */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		64BB2C9B29368B3E0004C536 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				64BB2C9C29368B550004C536 /* CellMock.swift */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -447,12 +525,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64BB2CA029368DAE0004C536 /* HomeViewCoordinatorTest.swift in Sources */,
 				64B9723D29353FAF00605C49 /* TestConstants.swift in Sources */,
 				64B9724F2935C1D200605C49 /* PlantetsAPIMock.swift in Sources */,
 				64B97244293540C300605C49 /* HomeViewControllerMock.swift in Sources */,
 				64B972422935402E00605C49 /* HomeInteractorMock.swift in Sources */,
+				64BB2C89293654C50004C536 /* HomeServiceMock.swift in Sources */,
 				64B9724D2935C12500605C49 /* PlanetsInfoSWMock.swift in Sources */,
+				64BB2C8F29365EB70004C536 /* AlertClassMock.swift in Sources */,
+				64BB2C94293678920004C536 /* HomeViewControllerTest.swift in Sources */,
+				64BB2C8C2936582B0004C536 /* ServiceAPIMock.swift in Sources */,
+				64BB2C9829367D230004C536 /* HomeCoordinatorMock.swift in Sources */,
+				64BB2C87293654380004C536 /* HomeInteractorTest.swift in Sources */,
+				64BB2C96293679130004C536 /* HomePresenterMock.swift in Sources */,
+				64BB2C92293661010004C536 /* StorageManagerMock.swift in Sources */,
 				64B9723F29353FE900605C49 /* HomePresenterTest.swift in Sources */,
+				64BB2C9D29368B550004C536 /* CellMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

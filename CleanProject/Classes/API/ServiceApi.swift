@@ -22,7 +22,6 @@ public class ServiceAPI: ServiceAPIProtocol{
                     
                 case .failure(let error):
                     completion(.failure(error))
-                    //print(error)
             }
         }
     }

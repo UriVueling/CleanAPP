@@ -18,7 +18,7 @@ class HomeInteractorMock: HomeInteractorProtocol{
         
         asktoServiceArrayCalled = true
         if errorCalled{
-            completion(.failure(TestConstants.errorTest))
+            completion(.failure(TestConstants.errorTestMock))
             showError = true
         }else{
             //Objecte que ha de tornar
