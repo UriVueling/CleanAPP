@@ -18,39 +18,28 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Zuo-hm-ZQr">
-                    <rect key="frame" x="0.0" y="59.000000000000007" width="393" height="25.333333333333336"/>
-                    <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MEu-T2-VA3">
-                            <rect key="frame" x="0.0" y="0.0" width="393" height="25.333333333333332"/>
-                            <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="PlanetName:   " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xWG-aq-smQ">
-                                    <rect key="frame" x="0.0" y="0.0" width="131.66666666666666" height="25.333333333333332"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" secondItem="xWG-aq-smQ" secondAttribute="height" multiplier="2:3" id="Aek-W5-lrn"/>
-                                    </constraints>
-                                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OF3-Yh-Cy1">
-                                    <rect key="frame" x="131.66666666666666" y="0.0" width="261.33333333333337" height="25.333333333333332"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                            </subviews>
-                        </stackView>
-                    </subviews>
-                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PlanetName:   " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xWG-aq-smQ">
+                    <rect key="frame" x="20" y="212.33333333333334" width="353" height="25.333333333333343"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OF3-Yh-Cy1">
+                    <rect key="frame" x="10" y="245" width="373" height="20.333333333333314"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="OBC-Ln-cqB"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="OBC-Ln-cqB" firstAttribute="bottom" secondItem="Zuo-hm-ZQr" secondAttribute="bottom" id="8WV-St-guC"/>
-                <constraint firstItem="Zuo-hm-ZQr" firstAttribute="leading" secondItem="OBC-Ln-cqB" secondAttribute="leading" id="UCU-dx-xmJ"/>
-                <constraint firstItem="OBC-Ln-cqB" firstAttribute="trailing" secondItem="Zuo-hm-ZQr" secondAttribute="trailing" id="emQ-oL-OHZ"/>
-                <constraint firstItem="Zuo-hm-ZQr" firstAttribute="top" secondItem="OBC-Ln-cqB" secondAttribute="top" id="tss-Dv-7sg"/>
+                <constraint firstItem="OF3-Yh-Cy1" firstAttribute="top" secondItem="xWG-aq-smQ" secondAttribute="bottom" constant="7.3333333333333712" id="LLs-wi-laB"/>
+                <constraint firstItem="OBC-Ln-cqB" firstAttribute="bottom" secondItem="OF3-Yh-Cy1" secondAttribute="bottom" constant="552.66666666666674" id="hEn-7h-dNB"/>
+                <constraint firstItem="OBC-Ln-cqB" firstAttribute="trailing" secondItem="xWG-aq-smQ" secondAttribute="trailing" constant="20" id="lax-Jj-3pM"/>
+                <constraint firstItem="OF3-Yh-Cy1" firstAttribute="centerX" secondItem="xWG-aq-smQ" secondAttribute="centerX" id="p9z-Hg-7O3"/>
+                <constraint firstItem="OF3-Yh-Cy1" firstAttribute="leading" secondItem="OBC-Ln-cqB" secondAttribute="leading" constant="10" id="v2a-l1-bWm"/>
+                <constraint firstItem="xWG-aq-smQ" firstAttribute="leading" secondItem="OBC-Ln-cqB" secondAttribute="leading" constant="20" id="zXP-nH-EfD"/>
             </constraints>
             <point key="canvasLocation" x="-109" y="76"/>
         </view>

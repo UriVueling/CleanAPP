@@ -6,14 +6,10 @@
 //
 
 import Foundation
+@testable import CleanProject
 
-protocol PlanetsInfoSWProtocol{
-    var count: Int { get }
-    var next: String? { get }
-    var previous: String? { get }
-    var results: [PlanetsAPIProtocol] { get}
-}
 struct PlanetsInfoSWMock: PlanetsInfoSWProtocol{
+    
     var count: Int
     var next: String?
     var previous: String?

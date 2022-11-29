@@ -9,13 +9,12 @@ import Foundation
 @testable import CleanProject
 
 class HomeInteractorMock: HomeInteractorProtocol{
-
     
     var errorCalled = false
     var asktoServiceArrayCalled = false
     var showError = false
     
-    func asktoServiceArray(url: String, completion: @escaping (Result<PlanetsInfoSWProtocol, Error>) -> Void) {
+    func asktoServiceArray(urlRecived url: String?, completion: @escaping (Result<PlanetsInfoSWProtocol, Error>) -> Void) {
         
         asktoServiceArrayCalled = true
         if errorCalled{
@@ -23,7 +22,7 @@ class HomeInteractorMock: HomeInteractorProtocol{
             showError = true
         }else{
             //Objecte que ha de tornar
-            completion(.success(PlanetsInfoSWProtocol))
+            completion(.success(TestConstants.planetsInfoSWMock))
             showError = false
         }
     }

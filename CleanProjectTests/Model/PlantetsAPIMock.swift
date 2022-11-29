@@ -6,13 +6,8 @@
 //
 
 import Foundation
+@testable import CleanProject
 
-protocol PlanetsAPIProtocol{
-    
-    var name: String { get }
-    //var rotation_period: String { get }
-
-}
 struct PlanetsAPIMock: PlanetsAPIProtocol{
     var name: String
     //var rotation_period: String

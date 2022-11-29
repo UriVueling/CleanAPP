@@ -22,9 +22,8 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconPlanet" translatesAutoresizingMaskIntoConstraints="NO" id="JN6-ST-eOM">
                                 <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="JN6-ST-eOM" secondAttribute="height" multiplier="1:1" id="TeO-Vp-SGI"/>
-                                    <constraint firstAttribute="width" constant="44" id="t8P-Yx-y7j"/>
-                                    <constraint firstAttribute="height" constant="44" id="tMM-8O-xrV"/>
+                                    <constraint firstAttribute="width" secondItem="JN6-ST-eOM" secondAttribute="height" multiplier="1:1" id="8YU-O6-by5"/>
+                                    <constraint firstAttribute="width" constant="44" id="PNg-GL-aVz"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5sf-wb-aog">

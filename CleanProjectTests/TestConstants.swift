@@ -12,9 +12,8 @@ struct TestConstants{
     
     //TODO: CAMBIAR
     //Crear un mock de cada clase
-    static let planetsAPIMock =  PlanetsAPIMock(name: "Terra")
-    //static let planetsAPIMock = PlanetsAPI((name: "Terra"))
-//    static let arrayPlanets = [planetsAPIMock]
+    static let planetsAPIMock =  PlanetsAPIMock(name: "Terra")    //static let planetsAPIMock = PlanetsAPI((name: "Terra"))
+    static let arrayPlanets = [planetsAPIMock]
     static let planetsInfoSWMock = PlanetsInfoSWMock(count: 1, results: [planetsAPIMock])
 //    static let serviceAPI : ServiceAPIMock = ServiceAPIMock()
     
