@@ -15,7 +15,7 @@ protocol HomePresenterProtocol{
     func getArray() -> [PlanetsAPIProtocol]
     func checkIfMoreURL()-> Bool
     var loadFromCache: Bool { get set }
-    var firstCallSemaforo: Bool { get set }
+    var firstCall: Bool { get set }
     //var loadSpinner: Bool { get set }
     
 }
@@ -24,7 +24,7 @@ internal final class HomePresenter {
     var interactor: HomeInteractorProtocol
     var view: HomeViewProtocol?
     var urlToPass: String?
-    var firstCallSemaforo = false
+    var firstCall = false
     
     //var urlToPass = "https://swapi.dev/api/planets/"
     var arrayLocal = [PlanetsAPIProtocol]()
@@ -43,9 +43,9 @@ extension HomePresenter: HomePresenterProtocol {
     
     func askForArrayInteractorWithURL() {
         
-        if !firstCallSemaforo{
+        if !firstCall{
             urlToPass = "https://swapi.dev/api/planets/"
-            firstCallSemaforo = true
+            firstCall = true
         }
         view?.loadingView(.show)
         interactor.asktoServiceArray(urlRecived: urlToPass,completion: {
