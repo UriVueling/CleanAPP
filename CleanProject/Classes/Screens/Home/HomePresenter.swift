@@ -70,6 +70,7 @@ extension HomePresenter: HomePresenterProtocol {
                     self.arrayLocal = StorageManager().getObjects(name: "planets.json") as! [PlanetsAPI]
                     self.view?.loadData()
                     self.view?.showAlert(tittle: "Error en la API", messageAlert: "No estamos recibiendo la info, cargando de cache")
+                    
                 }else{
                     self.view?.showAlert(tittle: "Sorry", messageAlert: "No tenemos cache")
                 }

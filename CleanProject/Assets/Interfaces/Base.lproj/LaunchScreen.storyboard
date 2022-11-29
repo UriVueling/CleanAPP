@@ -16,27 +16,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconPlanet" translatesAutoresizingMaskIntoConstraints="NO" id="pQo-Gl-JUp">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="uriSplash" translatesAutoresizingMaskIntoConstraints="NO" id="pQo-Gl-JUp">
+                                <rect key="frame" x="56" y="181" width="304" height="537"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="pQo-Gl-JUp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="BKq-lT-AgM"/>
-                            <constraint firstItem="pQo-Gl-JUp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dDl-Al-b4C"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pQo-Gl-JUp" secondAttribute="trailing" id="pEL-E5-if5"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pQo-Gl-JUp" secondAttribute="bottom" id="rNo-ZO-pLg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pQo-Gl-JUp" secondAttribute="bottom" constant="100" id="99O-y9-6se"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pQo-Gl-JUp" secondAttribute="trailing" constant="33" id="NQ2-gI-djl"/>
+                            <constraint firstItem="pQo-Gl-JUp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="56" id="SmH-iE-9tH"/>
+                            <constraint firstItem="pQo-Gl-JUp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="122" id="fP1-Rc-fup"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.671755725190835" y="374.64788732394368"/>
         </scene>
     </scenes>
     <resources>
-        <image name="iconPlanet" width="225" height="225"/>
+        <image name="uriSplash" width="768" height="1504"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
