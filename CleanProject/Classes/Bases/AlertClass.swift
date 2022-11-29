@@ -15,7 +15,7 @@ class AlertClass: AlertClassProtocol{
     func callAlert(with titleAlert: String, messageAlert: String, onView: UIViewController){
         let alert = UIAlertController(title: titleAlert, message: messageAlert, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler:{  action in
-            print("tapped")
+            //Action if needed
         }))
         onView.present(alert, animated: true)
     }

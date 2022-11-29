@@ -72,7 +72,7 @@ extension HomePresenter: HomePresenterProtocol {
                     self.view?.showAlert(tittle: "Error en la API", messageAlert: "No estamos recibiendo la info, cargando de cache")
                     
                 }else{
-                    self.view?.showAlert(tittle: "Sorry", messageAlert: "No tenemos cache")
+                    self.view?.showAlert(tittle: "Sorry", messageAlert: "No tenemos cache, tienes internet?")
                 }
 
                 break

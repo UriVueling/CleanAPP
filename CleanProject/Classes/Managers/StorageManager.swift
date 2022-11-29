@@ -18,7 +18,6 @@ struct StorageManager {
             let data = try JSONEncoder().encode(plantetObj)
             
             let cachesDirectory = getCachesDirectory()
-            //print(cachesDirectory)
             let storageURL = cachesDirectory.appendingPathComponent(name, isDirectory: false)
             
             do {

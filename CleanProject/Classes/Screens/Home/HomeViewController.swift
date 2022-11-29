@@ -14,7 +14,6 @@ enum LoadingState{
 }
 
 protocol HomeViewProtocol {
-    //func didTapOnButton(viewController: HomeViewController)
     func showAlert(tittle: String, messageAlert: String)
     func loadData()
     func loadingView(_ state: LoadingState)
@@ -85,7 +84,7 @@ extension HomeViewController: HomeViewProtocol {
             guard let stopNextCall = presenter?.checkIfMoreURL() else { return }
             if indexPath.row == (countingRowsOfTable - 5) && stopNextCall{
                 presenter?.askForArrayInteractorWithURL()
-                print("asking more")
+
             }
         }
         

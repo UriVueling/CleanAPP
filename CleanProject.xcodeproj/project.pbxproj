@@ -37,6 +37,7 @@
 		64B97244293540C300605C49 /* HomeViewControllerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B97243293540C300605C49 /* HomeViewControllerMock.swift */; };
 		64B9724D2935C12500605C49 /* PlanetsInfoSWMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B9724C2935C12500605C49 /* PlanetsInfoSWMock.swift */; };
 		64B9724F2935C1D200605C49 /* PlantetsAPIMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B9724E2935C1D200605C49 /* PlantetsAPIMock.swift */; };
+		64BB2C822935FA290004C536 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 64BB2C842935FA290004C536 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,8 @@
 		64B97243293540C300605C49 /* HomeViewControllerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerMock.swift; sourceTree = "<group>"; };
 		64B9724C2935C12500605C49 /* PlanetsInfoSWMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsInfoSWMock.swift; sourceTree = "<group>"; };
 		64B9724E2935C1D200605C49 /* PlantetsAPIMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantetsAPIMock.swift; sourceTree = "<group>"; };
+		64BB2C832935FA290004C536 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		64BB2C852935FA2D0004C536 /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = ca.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -280,6 +283,7 @@
 		64B972272935129E00605C49 /* Translations */ = {
 			isa = PBXGroup;
 			children = (
+				64BB2C842935FA290004C536 /* Localizable.strings */,
 			);
 			path = Translations;
 			sourceTree = "<group>";
@@ -395,6 +399,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				64B971C62934DE4E00605C49 /* LaunchScreen.storyboard in Resources */,
+				64BB2C822935FA290004C536 /* Localizable.strings in Resources */,
 				64B9722229350D4000605C49 /* DetailsHomeView.xib in Resources */,
 				64B971C32934DE4E00605C49 /* Assets.xcassets in Resources */,
 				64B972122934E64700605C49 /* CustomCell.xib in Resources */,
@@ -469,6 +474,15 @@
 				64B972262935110C00605C49 /* ca */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		64BB2C842935FA290004C536 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				64BB2C832935FA290004C536 /* en */,
+				64BB2C852935FA2D0004C536 /* ca */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -601,8 +615,7 @@
 				INFOPLIST_FILE = CleanProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -627,8 +640,7 @@
 				INFOPLIST_FILE = CleanProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
