@@ -7,7 +7,7 @@
 //
 protocol HomePresenterProtocol{
     var view: HomeViewProtocol? { get set }
-    var urlToPass: String { get set }
+    var urlToPass: String? { get set }
     //TODO: change PlanetsAPI
     var arrayLocal: [PlanetsAPIProtocol] { get set }
     func askForArrayInteractorWithURL()
@@ -15,19 +15,21 @@ protocol HomePresenterProtocol{
     func getArray() -> [PlanetsAPIProtocol]
     func checkIfMoreURL()-> Bool
     var loadFromCache: Bool { get set }
+    var firstCallSemaforo: Bool { get set }
     //var loadSpinner: Bool { get set }
     
 }
 
-class HomePresenter {
-    
+internal final class HomePresenter {
     var interactor: HomeInteractorProtocol
     var view: HomeViewProtocol?
+    var urlToPass: String?
+    var firstCallSemaforo = false
     
-    var urlToPass = "https://swapi.dev/api/planets/"
+    //var urlToPass = "https://swapi.dev/api/planets/"
     var arrayLocal = [PlanetsAPIProtocol]()
     var loadFromCache = false
-    //var loadSpinner = false
+
     
     init(interactor: HomeInteractorProtocol) {
         self.interactor = interactor
@@ -37,15 +39,24 @@ class HomePresenter {
 }
 
 extension HomePresenter: HomePresenterProtocol {
+    
+    
     func askForArrayInteractorWithURL() {
+        
+        if !firstCallSemaforo{
+            urlToPass = "https://swapi.dev/api/planets/"
+            firstCallSemaforo = true
+        }
         view?.loadingView(.show)
-        interactor.asktoServiceArray(url: urlToPass, completion: {
+        interactor.asktoServiceArray(urlRecived: urlToPass,completion: {
             result in
             switch result {
             case .success(let resultAPI):
                 
                 self.arrayLocal.append(contentsOf: resultAPI.results)
-                guard let nexturl = resultAPI.next else { return }
+                guard let nexturl = resultAPI.next else {
+                    self.urlToPass = nil
+                    return }
                 self.urlToPass = nexturl
                 self.view?.loadData()
                 self.saveCache()
@@ -79,11 +90,13 @@ extension HomePresenter: HomePresenterProtocol {
     }
     
     func checkIfMoreURL()-> Bool {
-        //print("URL:____________________________\(urlToPass)")
+
         if (urlToPass != nil){
             return true
+            
         } else{
             return false
+            
         }
     }
     func saveCache(){

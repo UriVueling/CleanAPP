@@ -8,14 +8,13 @@
 import Foundation
 
 protocol ServiceAPIProtocol{
-    func getSWArrayLocationResult(urlRecived: String, completion: @escaping (Result<PlanetsInfoSWProtocol, Error>) -> Void)
+    func getSWArrayLocationResult(url: String?, completion: @escaping (Result<PlanetsInfoSWProtocol, Error>) -> Void)
     
 }
 
 public class ServiceAPI: ServiceAPIProtocol{
-    func getSWArrayLocationResult(urlRecived: String, completion: @escaping (Result<PlanetsInfoSWProtocol, Error>) -> Void){
-        
-        ApiManager.shared.ApiCall(for: urlRecived) { (result: Result<PlanetsInfoSW, Error>) in
+    func getSWArrayLocationResult(url: String?, completion: @escaping (Result<PlanetsInfoSWProtocol, Error>) -> Void){
+        ApiManager.shared.ApiCall(for: url) { (result: Result<PlanetsInfoSW, Error>) in
             switch result{
                 
                 case .success(let object):

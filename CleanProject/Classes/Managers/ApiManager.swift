@@ -10,8 +10,10 @@ import Foundation
 struct ApiManager {
     static let shared = ApiManager()
     
-    func ApiCall<T: Decodable>(for url: String, completion: @escaping (Result<T, Error>) -> Void) {
-        guard let url = URL(string: url) else {
+    func ApiCall<T: Decodable>(for urlRecived: String?, completion: @escaping (Result<T, Error>) -> Void) {
+        guard let urlRecived else{ return }
+        
+        guard let url = URL(string: urlRecived) else {
             completion(
                 .failure(
                     CustomError(

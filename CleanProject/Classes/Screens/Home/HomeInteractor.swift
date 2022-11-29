@@ -9,7 +9,7 @@ import Foundation
 
 protocol HomeInteractorProtocol {
 
-    func asktoServiceArray(url: String, completion: @escaping (Result<PlanetsInfoSWProtocol, Error>) -> Void)
+    func asktoServiceArray(urlRecived: String?, completion: @escaping (Result<PlanetsInfoSWProtocol, Error>) -> Void)
     
 }
 
@@ -25,10 +25,10 @@ internal final class HomeInteractor {
 
 extension HomeInteractor: HomeInteractorProtocol {
 
-    func asktoServiceArray(url: String, completion: @escaping (Result<PlanetsInfoSWProtocol, Error>) -> Void) {
+    func asktoServiceArray(urlRecived: String?, completion: @escaping (Result<PlanetsInfoSWProtocol, Error>) -> Void) {
         let serviceAPIProtocol = self.service.giveBackAPIService()
 
-        serviceAPIProtocol.getSWArrayLocationResult(urlRecived: url, completion: { result in
+        serviceAPIProtocol.getSWArrayLocationResult(url: urlRecived, completion: { result in
             completion(result)
         })
     }
